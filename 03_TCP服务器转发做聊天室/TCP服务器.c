@@ -66,7 +66,7 @@ int main(int argc, char *argv[])
     void *pthread_func(void *arg); //函数体内声明函数
     while (1)
     {
-        CID.cid = accept(tcp_socket, (struct sockaddr *)&CID.tcp_sockaddr, &CID.len);
+        CID.cid = accept(tcp_socket, (struct sockaddr *)&CID.tcp_sockaddr, &CID.len);//套接字
         if (CID.cid == -1)
         {
             perror("接收客户端响应失败:");
